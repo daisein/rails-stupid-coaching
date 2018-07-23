@@ -1,0 +1,14 @@
+<h1>Homepage</h1>
+
+<form action="/answer" method="get">
+  <input type="text" name="food_type" placeholder="What kind of food?">
+  <input type="submit">
+</form>
+
+<ul>
+  <% @questions.each do |q|%>
+  <li>
+  <%= q[1][:ask] %>
+  </li>
+  <% end %>
+</ul>
